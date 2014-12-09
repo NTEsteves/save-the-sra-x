@@ -5,10 +5,13 @@ public class Player : MonoBehaviour {
 
 	private Transform trans;
 	public string scene;
+	public static float life;
+	public string custom;
 
 	// Use this for initialization
 	void Start () {
 		trans = GetComponent<Transform>();
+		life = 5f;
 	}
 	
 	// Update is called once per frame
@@ -50,6 +53,31 @@ public class Player : MonoBehaviour {
 			break;
 		}
 
+		switch(other.gameObject.tag)
+		{
+		case "Enemy":
+			
+
+			life --;
+
+			Debug.Log(life);
+			
+
+			
+			break;
+		}
+
 	}
 
-}
+		void OnGUI() 
+		{
+			
+			GUI.Label (new Rect (Screen.width * 0.5f, Screen.height * 0.01f, 50, 15), "Life: " + life.ToString("F0"), custom);
+			
+		}
+
+
+
+	}
+
+
