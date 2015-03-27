@@ -1,0 +1,1 @@
+Depois de tanto perder no campo de batalha do jogo da velha, o malvado bola, com raiva raptou a senhorita X, e agora o Sr X precisa salvar a Sra X das mãos do malvado bola.
