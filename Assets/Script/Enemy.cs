@@ -24,22 +24,40 @@ public class Enemy: MonoBehaviour
 	{
 		switch(other.gameObject.tag)
 		{
-		case "Wall":
+		case "WallVisible":
 
 			VelX = 0.10f;
-			VelY = 0;
+			VelY = -0.07f;
 			Debug.Log ("Bateu");
 
 		break;
 		}
 		switch(other.gameObject.tag)
 		{
-		case "Wall2":
+		case "Wall2Visible":
 			
 			VelX = -0.10f;
-			VelY = 0;
+			VelY = 0.02f;
 			Debug.Log ("Bateu");
 			
+			break;
+		}
+		switch (other.gameObject.tag) 
+		{
+		case "Teto":
+
+			VelX = 0f;
+			VelY = -0.05f;
+
+			break;
+		}
+
+		switch (other.gameObject.tag) 
+		{
+		case "Chao":
+			VelX = 0.05f ;
+		VelY = 0.1f;
+
 			break;
 		}
 	}
